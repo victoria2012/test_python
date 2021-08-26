@@ -6,11 +6,25 @@ class Athlete:
     def getInnerValue(self):
         return self.inner_value
 
-class Temp(Athlete):
+class InheritanceClass(Athlete):      # 상속
     def __init__(self):
-        super()
+        super().__init__()
 
-athlete = Athlete()      # == Athlete.__init__()
+    def setValue(self, first_value):
+        self.inherit_value = first_value
 
-print(athlete.getInnerValue())
+    def getValue(self):
+        return self.inherit_value
+
+# inherit = InheritanceClass()
+#
+# print(inherit.getInnerValue())
+#
+# inherit.setValue(first_value='Changsok')
+#
+# print(inherit.getValue())
+
+# athlete = Athlete(value='Changsok')      # == Athlete.__init__()
+#
+# print(athlete.getInnerValue())
 
